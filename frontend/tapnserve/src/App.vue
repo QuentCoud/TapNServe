@@ -1,15 +1,37 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <nav v-if="isAuthenticationComponent">
+      <RouterLink to="/">Go to Home</RouterLink><br>
+      <RouterLink to="/helloWorld/">Go to About</RouterLink>
+    </nav>
+    <main>
+      <div class="view-app">
+        <router-view></router-view>
+      </div>
+    </main>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      isAuthenticationComponent: false,
+    };
+  },
+  created() {
+    this.updateAuthenticationComponent(this.$route);
+  },
+  watch: {
+    $route(to) {
+      this.updateAuthenticationComponent(to);
+    }
+  },
+  methods: {
+    updateAuthenticationComponent(route) {
+      this.isAuthenticationComponent = route.path !== '/';
+    }
   }
 }
 </script>
@@ -22,5 +44,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.view-app {
+  flex-grow: 1;
+  margin: 0 2 rem;
 }
 </style>
