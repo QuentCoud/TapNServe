@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <nav v-if="isAuthenticationComponent">
-      <RouterLink to="/">Go to Home</RouterLink><br>
-      <RouterLink to="/helloWorld/">Go to About</RouterLink>
+      <RouterLink to="/">CONNEXION</RouterLink><br>
+      <RouterLink to="/client/"> CLIENT</RouterLink>
     </nav>
     <main>
       <div class="view-app">
