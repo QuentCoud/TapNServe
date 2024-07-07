@@ -20,17 +20,10 @@ export default {
       isAuthenticationComponent: false,
     };
   },
-  created() {
-    this.updateAuthenticationComponent(this.$route);
-  },
-  watch: {
-    $route(to) {
-      this.updateAuthenticationComponent(to);
-    }
-  },
-  methods: {
-    updateAuthenticationComponent(route) {
-      this.isAuthenticationComponent = route.path !== '/';
+  beforeMount() {
+    this.$store.dispatch('user/checkAuth')
+    if (this.$store.getters['user/isAuthenticated']) {
+      this.$router.push({name: "admin"})
     }
   }
 }

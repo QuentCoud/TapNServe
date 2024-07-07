@@ -2,17 +2,25 @@
   <div class="login-container">
     <h2>Connexion</h2>
     <form @submit.prevent="handleSubmit">
-      <div class="form-group">
-        <label for="username">Nom d'utilisateur ou Email</label>
-        <input type="text" id="username" v-model="username" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Mot de passe</label>
-        <input type="password" id="password" v-model="password" required>
-      </div>
-      <div class="form-group">
-        <CustomButton :text="'Se connecter'" :width="'100%'" @click="handleSubmit" />
-      </div>
+      <template v-if="!loading">
+        <div class="form-group">
+          <label for="username">Nom d'utilisateur ou Email</label>
+          <input type="text" id="username" v-model="user.name" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input type="password" id="password" v-model="user.password" required>
+        </div>
+
+        <div class="form-group">
+          <CustomButton :text="'Se connecter'" :width="'100%'" @click="handleSubmit" />
+        </div>
+
+        <div v-if="error" class="error">
+          Une erreur est survenue
+        </div>
+      </template>
+
     </form>
   </div>
 </template>
@@ -28,18 +36,38 @@ export default {
   },
   data() {
     return {
-      username: '',
-      password: ''
+      loading: false,
+      error: false,
+      user: {
+        name: '',
+        password: ''
+      }
     };
   },
   methods: {
     handleSubmit() {
-      console.log('Username:', this.username);
-      console.log('Password:', this.password);
-      // Connexion vers la bonne page en fonction du rôle utilisateur.
-      this.$router.push('/client');
+      this.loading = true;
+
+      this.$store.dispatch('user/login', this.user).then((res) => {
+        if (res) {
+          this.$router.push({name: 'admin'})
+        } else {
+          this.error = true
+        }
+      }).finally(() => {
+        this.loading = false;
+      })
     }
-  }
+  },
 };
 </script>
+
+<style scoped lang="scss">
+  .error {
+    width: 100%;
+    text-align: center;
+    color: red;
+    margin: 1rem 0;
+  }
+</style>
 
