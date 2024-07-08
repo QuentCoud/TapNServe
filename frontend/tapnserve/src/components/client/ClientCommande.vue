@@ -19,6 +19,10 @@
       }
     };
   },
+    beforeMount() {
+      const id = this.$route
+      console.log('ici', id)
+    }
   }
   </script>
   
