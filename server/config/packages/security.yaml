@@ -1,0 +1,20 @@
+security:
+  enable_authenticator_manager: true
+
+  # Définition du provider en mémoire
+  providers:
+    in_memory:
+      memory:
+        users:
+          test_user:
+            password: 'test_password'
+            roles: 'ROLE_USER'
+
+  firewalls:
+    main:
+      anonymous: true
+      custom_authenticator:
+        - App\Security\TokenAuthenticator
+
+  access_control:
+    - { path: ^/api, roles: ROLE_USER }
