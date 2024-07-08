@@ -1,10 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
   }
-  
+
+  h1 {
+    font-weight: bold;
+    font-size: 36px;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
   .login-container {
     background-color: #fff;
     padding: 20px;
@@ -70,3 +84,14 @@ body {
     border-radius: 50%; 
     object-fit: cover;
   }
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:active {
+  background-color: #bfe6e6;
+  background-size: 100%;
+  transition: background 0s;
+}

@@ -1,6 +1,5 @@
 <template>
   <div class="login-container">
-    <h2>Connexion</h2>
     <form @submit.prevent="handleSubmit">
       <template v-if="!loading">
         <div class="form-group">

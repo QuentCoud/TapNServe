@@ -1,5 +1,5 @@
 
-const IS_AUTHORIZE = false
+const IS_CONNECTED = false
 const USE_TOKEN = 'token'
 const users = [
     {
@@ -33,7 +33,7 @@ const actions = {
         }
     },
     getAuth(token) {
-        if (IS_AUTHORIZE) {
+        if (IS_CONNECTED) {
             return {
                 'token': token,
                 'name': "Jean le restaurateur"
