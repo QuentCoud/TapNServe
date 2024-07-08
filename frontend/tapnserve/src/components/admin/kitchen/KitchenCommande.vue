@@ -3,7 +3,7 @@
     <h1>Commandes</h1>
     <div class="tables-container">
       <div class="table">
-        <h3>En attente</h3>
+        <h2>En attente</h2>
         <table>
           <thead>
             <tr>
@@ -24,7 +24,7 @@
         </table>
       </div>
       <div class="table">
-        <h3>Terminé</h3>
+        <h2>Terminé</h2>
         <table>
           <thead>
             <tr>
