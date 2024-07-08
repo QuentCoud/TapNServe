@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import AuthentificationComponent from '../components/AuthentificationComponent.vue'
 import ClientCommande from '../components/client/ClientCommande.vue'
+import ErrorView from '../components/client/Error.vue'
 import IndexAdmin from '@/components/admin/indexAdmin.vue'
 import IndexKitchen from '@/components/admin/kitchen/KitchenCommande.vue'
 import IndexWaiter from '@/components/admin/waiter/WaiterCommande.vue'
@@ -9,6 +10,7 @@ import store from '@/store';
 
 const routes = [
     { path: '/', component: AuthentificationComponent },
+    { path: '/order/error', component: ErrorView, name: 'error' },
     { path: '/order/:uid', component: ClientCommande },
     {
         path: '/admin',

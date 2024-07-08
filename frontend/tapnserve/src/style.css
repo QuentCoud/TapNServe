@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -70,3 +74,14 @@ body {
     border-radius: 50%; 
     object-fit: cover;
   }
+
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+
+.ripple:active {
+  background-color: #bfe6e6;
+  background-size: 100%;
+  transition: background 0s;
+}

@@ -30,3 +30,19 @@ Afrontend/tapnserve/src/components/admin/waiter/WaiterCommande.vue,a\9\a952feb7
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+b
+2frontend/tapnserve/src/components/client/Error.vue,8\8\885535b5141a1b72653316ba8e620583d2e5a430
+U
+%frontend/tapnserve/tailwind.config.js,0\f\0f069bab03e29a64b28d086a53f5d3192a0c9339
+T
+$frontend/tapnserve/postcss.config.js,0\1\014eb64d5c5e8ed4265ab5fd8b061b1704d89338
+P
+ frontend/tapnserve/src/style.css,c\8\c8705f574dd8c56addb83a904e533668599adc01
+o
+?frontend/tapnserve/src/components/components/HorizontalMenu.vue,0\3\0326c6240711523ac6d6979985f4971d749f8fb2
+i
+9frontend/tapnserve/src/components/shared/ProfileImage.vue,6\1\61d9f501c6fbc22bbfc422792434f42d9cb3a596
+s
+Cfrontend/tapnserve/src/components/components/icons/plusOutlined.vue,9\f\9f6c9a64f13f89c08d07d8ed2a274adbb654398b
+t
+Dfrontend/tapnserve/src/components/components/icons/minusOutlined.vue,d\0\d0ab2d5bde955f780927edba447c5ab0d0dd795d
