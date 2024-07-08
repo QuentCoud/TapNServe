@@ -5,25 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d01cc5b-cf89-486b-9af4-0e37a5f26567" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/assets/plat/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/Error.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/components/HorizontalMenu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/components/icons/minusOutlined.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/components/icons/plusOutlined.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e2b6199ef491caedd6beaa4aa4f5fa5a505da182" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e2b6199ef491caedd6beaa4aa4f5fa5a505da182" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1720427259688</updated>
       <workItem from="1720427260884" duration="301000" />
-      <workItem from="1720427581647" duration="11678000" />
+      <workItem from="1720427581647" duration="12539000" />
     </task>
     <servers />
   </component>
