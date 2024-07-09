@@ -17,7 +17,7 @@
       </div>
       <div class="modal-footer">
         <button @click="close">Fermer</button>
-        <button @click="validate">Valider</button>
+        <button v-if="!isDetails" @click="validate">Valider</button>
       </div>
     </div>
   </div>
@@ -28,7 +28,8 @@ import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps({
   item: Object,
-  index: Number
+  index: Number,
+  isDetails: Boolean
 });
 
 const emit = defineEmits(['close', 'validate']);
@@ -110,27 +111,30 @@ const getImagePath = (imageName) => {
 
 .modal-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: 20px;
 }
 
 button {
-  background-color: red;
-  color: white;
+  background-color: #a9a9a9;
+  color: black;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  border-radius: 25px;
+  margin: 0 10px;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: darkred;
+  color: white;
 }
 
-button:nth-child(2) {
-  background-color: green;
+button:first-child:hover {
+  background-color: red;
 }
 
 button:nth-child(2):hover {
-  background-color: darkgreen;
+  background-color: green;
 }
 </style>

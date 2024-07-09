@@ -12,13 +12,21 @@
                  :class="[view === 'carte' ? 'bg-gray-300' : 'bg-gray-200']"
             > Carte
             </div>
+
+            <div @click="view='historique'" class="rounded-xl py-2 text-xl font-medium cursor-pointer"
+                 :class="[view === 'historique' ? 'bg-gray-300' : 'bg-gray-200']"
+            > Historique
+            </div>
           </div>
       </div>
 
       <div class="mx-5 h-full w-0.5 bg-gray-200"></div>
 
-      <div class="border border-gray-300 border-2 border-solid w-full rounded-3xl">
-        <Qrcodes v-if="view==='QR'" />
+      <div v-if="view==='QR'" class="border border-gray-300 border-2 border-solid w-full rounded-3xl">
+        <Qrcodes  />
+      </div>
+      <div v-if="view==='historique'" class="border border-gray-300 border-2 border-solid w-full rounded-3xl">
+        <Historique  />
       </div>
     </div>
   </modal-default>
@@ -27,10 +35,11 @@
 <script>
 import ModalDefault from "@/components/components/modalDefault.vue";
 import Qrcodes from "@/components/admin/Parameters/components/Qrcodes.vue";
+import Historique from "@/components/admin/Parameters/components/Historique.vue";
 
 export default {
   name: "indexParameters",
-  components: {Qrcodes, ModalDefault},
+  components: {Qrcodes, Historique, ModalDefault},
   data() {
     return {
       localshow: false,

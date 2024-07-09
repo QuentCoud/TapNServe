@@ -6,6 +6,12 @@
         <h2>En attente</h2>
         <div class="table">
           <table>
+            <colgroup>
+              <col style="width: auto;">
+              <col style="width: auto;">
+              <col style="width: auto;">
+              <col style="width: 20px;">
+            </colgroup>
             <tbody>
               <tr v-for="(item, index) in table1" :key="index" @click="openModal(item, index)" class="item-clickable">
                 <td>#{{ index + 1 }}</td>
@@ -27,6 +33,12 @@
         <h2>En cours</h2>
         <div class="table">
           <table>
+            <colgroup>
+              <col style="width: auto;">
+              <col style="width: auto;">
+              <col style="width: auto;">
+              <col style="width: 20px;">
+            </colgroup>
             <tbody>
               <tr v-for="(item, index) in table2" :key="index" @click="openModal(item, index)" class="item-clickable">
                 <td>#{{ index + 1 }}</td>
@@ -159,7 +171,7 @@ onMounted(() => {
 .tables-container {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 .table-section {
@@ -171,17 +183,15 @@ onMounted(() => {
 .table {
   border-radius: 10px;
   border: 2.5px solid green;
-  flex-grow: 1;
+  padding: 10px;
+  min-height: 80px;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  min-height: 100px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  flex-grow: 1;
 }
 
 tbody {
@@ -223,9 +233,13 @@ th {
 
 .item-clickable {
   cursor: pointer;
+  background-color: #d3d3d3;
+  border-radius: 10px;
+  border: 1px solid #a0a0a0;
 }
+
 .item-clickable:hover {
-  border-radius: 5px;
   background-color: #a0a0a0;
 }
+
 </style>
