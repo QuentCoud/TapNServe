@@ -1,6 +1,7 @@
 <template>
-  <div class="login-container">
-    <form @submit.prevent="handleSubmit">
+  <div>
+    <h1>Connexion</h1>
+    <form class="login-container" @submit.prevent="handleSubmit">
       <template v-if="!loading">
         <div class="form-group">
           <label for="username">Nom d'utilisateur ou Email</label>
@@ -49,7 +50,7 @@ export default {
 
       this.$store.dispatch('user/login', this.user).then((res) => {
         if (res) {
-          this.$router.push({name: 'kitchen'})
+          this.$router.push({name: 'waiter'})
         } else {
           this.error = true
         }
@@ -67,6 +68,9 @@ export default {
     text-align: center;
     color: red;
     margin: 1rem 0;
+  }
+  input {
+    background-color: #E8F0FE;
   }
 </style>
 

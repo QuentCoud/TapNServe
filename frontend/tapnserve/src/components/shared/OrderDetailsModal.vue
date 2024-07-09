@@ -1,10 +1,19 @@
 <template>
   <div class="modal-overlay" @click.self="close">
     <div class="modal-content">
-      <h2>Détails de la commande</h2>
       <div class="details">
-        <p><strong>Numéro de Table:</strong> {{ item.tableNumber }}</p>
-        <p><strong>Prix:</strong> {{ item.price }}</p>
+        <p><strong>#{{ index + 1 }}</strong> </p>
+        <p><strong>Table {{ item.table }}</strong> </p>
+        <p><strong>{{ item.total }}€</strong> </p>
+      </div>
+      <hr style="margin-top:5px; margin-bottom: 10px;">
+      <div v-for="(plat, i) in item.panier" :key="i" class="plat">
+        <img :src="getImagePath(plat.image)" alt="Image du plat" class="plat-image" />
+        <div class="plat-details">
+          <p class="plat-name"><strong>{{ plat.name }}</strong></p>
+          <p class="plat-description">{{ plat.description }}</p>
+        </div>
+        <p class="plat-price"><strong>{{ plat.prix }}€</strong></p>
       </div>
       <div class="modal-footer">
         <button @click="close">Fermer</button>
@@ -18,7 +27,8 @@
 import { defineProps, defineEmits } from 'vue';
 
 const props = defineProps({
-  item: Object
+  item: Object,
+  index: Number
 });
 
 const emit = defineEmits(['close', 'validate']);
@@ -29,6 +39,10 @@ const close = () => {
 
 const validate = () => {
   emit('validate', props.item);
+};
+
+const getImagePath = (imageName) => {
+  return require(`@/assets/plat/${imageName}`);
 };
 </script>
 
@@ -50,13 +64,48 @@ const validate = () => {
   background: white;
   padding: 20px;
   border-radius: 5px;
-  max-width: 500px;
+  max-width: 35%;
   width: 100%;
 }
 
 .details {
   display: flex;
   justify-content: space-between;
+}
+
+.plat {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.plat-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.plat-details {
+  flex-grow: 1;
+}
+
+.plat-name {
+  padding-left: 5px;
+  margin: 0;
+  text-align: left;
+}
+
+.plat-description {
+  padding-left: 5px;
+  margin: 0;
+  color: #666;
+  text-align: left;
+}
+
+.plat-price {
+  padding-left: 5px;
+  font-weight: bold;
 }
 
 .modal-footer {
