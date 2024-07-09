@@ -1,6 +1,6 @@
 <template>
   <modal-default v-model="localshow" @update:model-value="close">
-    <div class="w-[90rem] h-[45rem] flex">
+    <div class="w-[90rem] h-[45rem] flex m-6">
       <div class="w-[20rem]">
           <div class="mt-8 flex flex-col gap-y-2">
             <div @click="view='QR'" class="rounded-xl py-2 text-xl font-medium cursor-pointer"
@@ -22,11 +22,10 @@
 
       <div class="mx-5 h-full w-0.5 bg-gray-200"></div>
 
-      <div v-if="view==='QR'" class="border border-gray-300 border-2 border-solid w-full rounded-3xl">
-        <Qrcodes  />
-      </div>
-      <div v-if="view==='historique'" class="border border-gray-300 border-2 border-solid w-full rounded-3xl">
-        <Historique  />
+      <div class="border-gray-300 border-2 border-solid w-full rounded-3xl overflow-hidden">
+        <Qrcodes v-if="view==='QR'" />
+        <carte-modification v-else-if="view==='carte'" />
+        <Historique v-else-if="view==='historique'" />
       </div>
     </div>
   </modal-default>
@@ -36,10 +35,11 @@
 import ModalDefault from "@/components/components/modalDefault.vue";
 import Qrcodes from "@/components/admin/Parameters/components/Qrcodes.vue";
 import Historique from "@/components/admin/Parameters/components/Historique.vue";
+import CarteModification from "@/components/admin/Parameters/components/CarteModification.vue";
 
 export default {
   name: "indexParameters",
-  components: {Qrcodes, Historique, ModalDefault},
+  components: {CarteModification, Qrcodes, Historique, ModalDefault},
   data() {
     return {
       localshow: false,

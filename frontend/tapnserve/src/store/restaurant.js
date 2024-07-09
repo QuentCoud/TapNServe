@@ -69,7 +69,7 @@ const actions = {
         let val = JSON.parse(localStorage.getItem('panier')) ?? []
         let rdm = Math.round(Math.random() * 10000)
 
-        val.push({...payload, id: rdm, status: 0, table: Math.round(Math.random() * 10)})
+        val.push({...payload, id: rdm, status: 0})
 
         localStorage.setItem('panier', JSON.stringify(val))
 
@@ -79,6 +79,17 @@ const actions = {
 
 const getters = {
 };
+
+
+for (let restau of state().restaurantPool) {
+    const val = localStorage.getItem('carte'+restau.id)
+
+    if (!val) {
+        localStorage.setItem('carte'+restau.id, JSON.stringify(restau))
+    }
+}
+
+
 
 export default {
     namespaced: true,

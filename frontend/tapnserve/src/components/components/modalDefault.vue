@@ -3,7 +3,7 @@
        @click.self="close"
        v-if="modelValue"
   >
-    <div class="bg-white rounded-3xl p-6 min-w-[30rem] min-h-[10rem] flex items-center justify-center">
+    <div class="bg-white rounded-3xl min-w-[10rem] min-h-[5rem] flex items-center justify-center">
       <slot></slot>
     </div>
   </div>

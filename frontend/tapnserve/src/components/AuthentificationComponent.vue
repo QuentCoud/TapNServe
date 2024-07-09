@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="mt-40 w-1/3 mx-auto">
     <h1>Connexion</h1>
-    <form class="login-container" @submit.prevent="handleSubmit">
+    <form class="login-container mt-8" @submit.prevent="handleSubmit">
       <template v-if="!loading">
         <div class="form-group">
           <label for="username">Nom d'utilisateur ou Email</label>
@@ -12,7 +12,7 @@
           <input type="password" id="password" v-model="user.password" required>
         </div>
 
-        <div class="form-group">
+        <div class="form-group mt-12">
           <CustomButton :text="'Se connecter'" :width="'100%'" @click="handleSubmit" />
         </div>
 

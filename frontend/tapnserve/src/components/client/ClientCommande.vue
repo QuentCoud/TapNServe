@@ -86,7 +86,7 @@
 
     <div v-else>
       <div class="w-screen text-bold text-base text-gray-400 text-center my-auto">
-        You need to be on smartphone
+        You need to be on smartphone {{getRiyte}}
       </div>
     </div>
   </div>
@@ -119,6 +119,17 @@
       getTotalPrice() {
         return this.panier?.reduce((acc, val) => (val.prix * val.amount) + acc, 0) ?? 0
       },
+      getTable() {
+        const val = JSON.parse(localStorage.getItem('table'+this.$route.params.uid))
+        if (val) {
+          const val2 = val.find((ta) => {
+            return ta.id === parseInt(this.$route.params.table)
+          })
+
+          return val2.name ?? ''
+        }
+        return ''
+      }
     },
     methods: {
       initPanier() {
@@ -164,7 +175,9 @@
       },
       validate() {
         this.showValidation = false;
-        this.$store.dispatch('restaurant/sendCommand', {panier: this.panier, restau: this.$route.params.uid, total: this.getTotalPrice}).then((res) => {
+        this.$store.dispatch('restaurant/sendCommand',
+            {panier: this.panier, restau: this.$route.params.uid, total: (Math.round(this.getTotalPrice * 100) / 100), table: this.getTable}
+        ).then((res) => {
           localStorage.setItem('currentCommande', res)
           localStorage.setItem('panier'+this.restau.name, JSON.stringify([]))
 

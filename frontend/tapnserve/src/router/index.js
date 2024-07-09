@@ -14,7 +14,7 @@ const routes = [
     { path: '/', component: AuthentificationComponent, name: 'auth' },
     { path: '/order/error', component: ErrorView, name: 'error' },
     { path: '/order/command/:uid', component: StepView, name: 'commandStep' },
-    { path: '/order/:uid', component: ClientCommande },
+    { path: '/order/:uid/:table', component: ClientCommande, name: 'order' },
     {
         path: '/admin',
         component: IndexAdmin,

@@ -90,13 +90,13 @@ body {
 
 .ripple {
   background-position: center;
-  transition: background 0.8s;
+  transition: background .5s;
 }
 
 .ripple:active {
-  background-color: #bfe6e6;
+  background-color: #ffffff;
   background-size: 100%;
-  transition: background 0s;
+  transition: background .8s;
 }
 
 
@@ -142,4 +142,21 @@ body {
   &::-webkit-scrollbar-thumb:hover {
     background: #555; /* Couleur de la barre de défilement au survol */
   }
+}
+
+
+input:focus {
+  outline: none;
+}
+
+.divider {
+  @apply h-[1px] w-[90%] mx-auto bg-gray-300 my-2
+}
+
+.input {
+  @apply border border-gray-600 border-solid mt-1
+}
+
+.button {
+  @apply bg-[#497E7B] px-12 py-1 rounded-2xl font-medium text-xl text-white cursor-pointer ripple
 }
