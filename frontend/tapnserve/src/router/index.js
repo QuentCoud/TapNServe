@@ -4,6 +4,7 @@ import AuthentificationComponent from '../components/AuthentificationComponent.v
 import ClientCommande from '../components/client/ClientCommande.vue';
 import IndexAdmin from '@/components/admin/indexAdmin.vue';
 import IndexKitchen from '@/components/admin/kitchen/KitchenCommande.vue';
+import Qrcode from '@/components/admin/Parameters/components/Qrcodes.vue';
 import IndexWaiter from '@/components/admin/waiter/WaiterCommande.vue';
 import ErrorView from '@/components/client/Error.vue';
 import StepView from '@/components/client/StepAttente.vue';
@@ -22,7 +23,7 @@ const routes = [
             {
                 path: 'kitchen',
                 component: IndexKitchen,
-                name: 'kitchen'
+                name: 'kitchen',
             },
             {
                 path: 'waiter',

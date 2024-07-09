@@ -58,3 +58,11 @@ s
 Cfrontend/tapnserve/src/components/components/icons/exitOutlined.vue,7\d\7ddc745701a0840aadadbcd888ae9838fcfe155e
 x
 Hfrontend/tapnserve/src/components/components/icons/parameterOutlined.vue,d\1\d1ee638ca31c09fcf10cc2fa2c993104c479244b
+v
+Ffrontend/tapnserve/src/components/admin/Parameters/indexParameters.vue,d\5\d5a92d76f66ed55fb8ee2a96fbbec3d4bed43f07
+f
+6frontend/tapnserve/src/components/components/modal.vue,4\8\48ede4505c700bdb68625ca1009f624f72e0188a
+m
+=frontend/tapnserve/src/components/components/modalDefault.vue,7\b\7b2ecfce84b5757a6432724996e1c3023756eb64
+y
+Ifrontend/tapnserve/src/components/admin/Parameters/components/Qrcodes.vue,1\4\14a3a905e9c3c3c9d74f254d22e4ed41d4c5eaf0
