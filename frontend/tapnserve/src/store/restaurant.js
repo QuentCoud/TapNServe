@@ -69,7 +69,7 @@ const actions = {
         let val = JSON.parse(localStorage.getItem('panier')) ?? []
         let rdm = Math.round(Math.random() * 10000)
 
-        val.push({...payload, id: rdm})
+        val.push({...payload, id: rdm, status: 0})
 
         localStorage.setItem('panier', JSON.stringify(val))
 

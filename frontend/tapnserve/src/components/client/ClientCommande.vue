@@ -166,6 +166,7 @@
         this.showValidation = false;
         this.$store.dispatch('restaurant/sendCommand', {panier: this.panier, restau: this.$route.params.uid}).then((res) => {
           localStorage.setItem('currentCommande', res)
+          localStorage.setItem('panier'+this.restau.name, JSON.stringify([]))
 
           setTimeout(() => {
             this.$router.push({name: 'commandStep', params: {uid: res}})

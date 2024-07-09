@@ -5,28 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d01cc5b-cf89-486b-9af4-0e37a5f26567" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TapNServe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TapNServe.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e2b6199ef491caedd6beaa4aa4f5fa5a505da182" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/2/e2b6199ef491caedd6beaa4aa4f5fa5a505da182" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/Paiement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/packages/nelmio_cors.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/Panier.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ScanComponent.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/config/routes/security.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/public/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/Controller/CommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Controller/CommandeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,28 +109,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/Cours/M4/TapNServe/frontend/tapnserve/public",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Cours/M4/TapNServe/frontend/tapnserve/public&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Cours\M4\TapNServe\frontend\tapnserve\public" />

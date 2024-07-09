@@ -46,3 +46,7 @@ s
 Cfrontend/tapnserve/src/components/components/icons/plusOutlined.vue,9\f\9f6c9a64f13f89c08d07d8ed2a274adbb654398b
 t
 Dfrontend/tapnserve/src/components/components/icons/minusOutlined.vue,d\0\d0ab2d5bde955f780927edba447c5ab0d0dd795d
+e
+5frontend/tapnserve/src/components/client/Paiement.vue,4\0\40c1890434a87e51d6d14457dbad43aad6e822f1
+h
+8frontend/tapnserve/src/components/client/StepAttente.vue,d\f\dff76ec1c2210d21b78e338da853f73cfd4cbcd2
