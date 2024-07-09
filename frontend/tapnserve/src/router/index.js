@@ -10,7 +10,7 @@ import StepView from '@/components/client/StepAttente.vue';
 import store from '@/store';
 
 const routes = [
-    { path: '/', component: AuthentificationComponent },
+    { path: '/', component: AuthentificationComponent, name: 'auth' },
     { path: '/order/error', component: ErrorView, name: 'error' },
     { path: '/order/command/:uid', component: StepView, name: 'commandStep' },
     { path: '/order/:uid', component: ClientCommande },
@@ -40,8 +40,14 @@ const router = createRouter({
 
 router.beforeEach((to) => {
     if (to.fullPath.includes('admin')) {
-        if (!store.getters['user/isAuthenticated']) {
-            // router.push({path: '/'})
+        if (localStorage.getItem('online')) {
+            store.dispatch('user/checkAuth').then((res) => {
+                if (!res) {
+                    router.push({name: 'kitchen'})
+                }
+            })
+        } else {
+            router.push({path: '/'})
         }
     } else if (to.fullPath.includes('order')) {
         // if (store.dispatch('user/isAuthenticated')) {

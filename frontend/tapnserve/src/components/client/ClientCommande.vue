@@ -164,7 +164,7 @@
       },
       validate() {
         this.showValidation = false;
-        this.$store.dispatch('restaurant/sendCommand', {panier: this.panier, restau: this.$route.params.uid}).then((res) => {
+        this.$store.dispatch('restaurant/sendCommand', {panier: this.panier, restau: this.$route.params.uid, total: this.getTotalPrice}).then((res) => {
           localStorage.setItem('currentCommande', res)
           localStorage.setItem('panier'+this.restau.name, JSON.stringify([]))
 

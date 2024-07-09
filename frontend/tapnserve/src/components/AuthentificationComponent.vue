@@ -49,7 +49,7 @@ export default {
 
       this.$store.dispatch('user/login', this.user).then((res) => {
         if (res) {
-          this.$router.push({name: 'admin'})
+          this.$router.push({name: 'kitchen'})
         } else {
           this.error = true
         }

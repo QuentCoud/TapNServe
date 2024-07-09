@@ -1,23 +1,32 @@
+import {useRouter} from "vue-router";
 
 const IS_CONNECTED = false
 const USE_TOKEN = 'token'
 const users = [
     {
         name: 'test',
-        password: 'test'
+        password: 'test',
+        restau: 'test1'
     }
 ]
 
 
 const state = () => ({
-    name: 'John Doe',
+    name: null,
     loggedIn: false,
+    restau: null,
 });
 
 const mutations = {
     SET_USER(state, user) {
         state.loggedIn = true;
         state.name = user.name
+        state.restau = user.restau
+    },
+    UNSET_USER(state) {
+        state.loggedIn = false;
+        state.name = null
+        state.restau = null
     },
 };
 
@@ -27,26 +36,25 @@ const actions = {
 
         if (u) {
             commit('SET_USER', u)
+            localStorage.setItem('online', u.restau)
             return true
         } else {
             return false
         }
     },
-    getAuth(token) {
-        if (IS_CONNECTED) {
-            return {
-                'token': token,
-                'name': "Jean le restaurateur"
-            }
+    getAuth() {
+        const restau = localStorage.getItem('online')
+        if (restau) {
+            return users.find((user) => restau === user.restau)
         } else {
-            return false
+            return null
         }
     },
     checkAuth({ commit }) {
         if (state.loggedIn) {
             return true
         } else {
-            const user = actions.getAuth(USE_TOKEN)
+            const user = actions.getAuth()
 
             if (typeof user === 'object') {
                 commit('SET_USER', user)
@@ -56,12 +64,23 @@ const actions = {
             return false
         }
     },
+    logout({ commit }) {
+        commit('UNSET_USER')
+        localStorage.removeItem('online')
+        return true
+    }
 };
 
 const getters = {
     isAuthenticated(state) {
         return state.loggedIn;
     },
+    getUser(state) {
+        return {
+            restau: state.restau,
+            name: state.name
+        }
+    }
 };
 
 export default {

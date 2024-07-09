@@ -50,3 +50,11 @@ e
 5frontend/tapnserve/src/components/client/Paiement.vue,4\0\40c1890434a87e51d6d14457dbad43aad6e822f1
 h
 8frontend/tapnserve/src/components/client/StepAttente.vue,d\f\dff76ec1c2210d21b78e338da853f73cfd4cbcd2
+f
+6frontend/tapnserve/src/components/admin/indexAdmin.vue,4\6\469b79a15025fcc3dec5a6f2b43b54d496c2b19c
+k
+;frontend/tapnserve/src/components/components/icons/exit.vue,f\d\fdde7126e9872b3f6fd1c5945c28209ea342fce5
+s
+Cfrontend/tapnserve/src/components/components/icons/exitOutlined.vue,7\d\7ddc745701a0840aadadbcd888ae9838fcfe155e
+x
+Hfrontend/tapnserve/src/components/components/icons/parameterOutlined.vue,d\1\d1ee638ca31c09fcf10cc2fa2c993104c479244b

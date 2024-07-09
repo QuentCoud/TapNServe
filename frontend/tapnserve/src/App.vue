@@ -21,10 +21,6 @@ export default {
     };
   },
   beforeMount() {
-    this.$store.dispatch('user/checkAuth')
-    if (this.$store.getters['user/isAuthenticated']) {
-      this.$router.push({name: "admin"})
-    }
   }
 }
 </script>
