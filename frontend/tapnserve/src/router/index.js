@@ -6,11 +6,13 @@ import IndexAdmin from '@/components/admin/indexAdmin.vue';
 import IndexKitchen from '@/components/admin/kitchen/KitchenCommande.vue';
 import IndexWaiter from '@/components/admin/waiter/WaiterCommande.vue';
 import ErrorView from '@/components/client/Error.vue';
+import StepView from '@/components/client/StepAttente.vue';
 import store from '@/store';
 
 const routes = [
     { path: '/', component: AuthentificationComponent },
     { path: '/order/error', component: ErrorView, name: 'error' },
+    { path: '/order/command/:uid', component: StepView, name: 'commandStep' },
     { path: '/order/:uid', component: ClientCommande },
     {
         path: '/admin',

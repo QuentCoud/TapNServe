@@ -85,6 +85,9 @@ body {
     object-fit: cover;
   }
 
+
+
+
 .ripple {
   background-position: center;
   transition: background 0.8s;
@@ -94,4 +97,49 @@ body {
   background-color: #bfe6e6;
   background-size: 100%;
   transition: background 0s;
+}
+
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: transform 0.3s ease-out;
+}
+
+.slide-up-enter-from {
+  transform: translateY(100%);
+}
+
+.slide-up-leave-to {
+  transform: translateY(100%);
+}
+
+.thin-scroll {
+  &::-webkit-scrollbar {
+    width: 3px; /* Largeur de la scrollbar */
+    padding-left: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Couleur du fond de la track */
+    border-radius: 10px; /* Coins arrondis */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #bbbaba; /* Couleur de la barre de défilement */
+    border-radius: 10px; /* Coins arrondis */
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Couleur de la barre de défilement au survol */
+  }
 }

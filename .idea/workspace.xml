@@ -5,7 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d01cc5b-cf89-486b-9af4-0e37a5f26567" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TapNServe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TapNServe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeception.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeception.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/Paiement.vue" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/packages/nelmio_cors.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/Panier.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ScanComponent.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/config/routes/security.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/Controller/CommandeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/Controller/CommandeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/server/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,16 +36,86 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
         <option value="Vue Single File Component" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/server/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/server/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/server/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/server/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/server/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/server/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/server/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/clock" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/type-info" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/server/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/server/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/server/vendor/composer" />
+    </include_path>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -39,6 +130,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "D:/Cours/M4/TapNServe/frontend/tapnserve/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -46,7 +138,13 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -73,5 +171,8 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

@@ -1,2 +1,7 @@
 frontend/tapnserve/node_modules
 server/vendor
+
+.DS_Store
+.idea/
+*.iml
+*.xml

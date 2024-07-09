@@ -33,11 +33,7 @@ class CommandeController extends AbstractController
     #[Route('/commande', methods: ['POST'])]
     public function create(): JsonResponse
     {
-        return $this->json(
-            [
-                'id' => 1,
-            ]
-        );
+        return new JsonResponse(['ok' => 'ok']);
     }
 
     #[Route('/commande/{id}', methods: ['PUT'])]

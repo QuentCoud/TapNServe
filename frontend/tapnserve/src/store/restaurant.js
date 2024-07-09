@@ -1,3 +1,4 @@
+import axios from "../axios";
 
 const state = () => ({
     restaurantPool: [
@@ -8,6 +9,13 @@ const state = () => ({
             carte: {
                 "Restaurant": [
                     {
+                        id: "plat1",
+                        name: "plat1",
+                        image: "test.jpg",
+                        prix: 20.99,
+                        description: "jea fe vzvzvzh vds vds vdsvdsv vdsvsdv v dvd vds  d vsddsvdsv vdsv vdvsvds vdsvsv v vdsv dsvdsvs"
+                    },
+                    {
                         id: "plat2",
                         name: "plat2",
                         image: "test.jpg",
@@ -16,7 +24,21 @@ const state = () => ({
                     },
                     {
                         id: "plat3",
-                        name: "plat2",
+                        name: "plat3",
+                        image: "test.jpg",
+                        prix: 20.99,
+                        description: "jea fe vzvzvzh vds vds vdsvdsv vdsvsdv v dvd vds  d vsddsvdsv vdsv vdvsvds vdsvsv v vdsv dsvdsvs"
+                    },
+                    {
+                        id: "plat4",
+                        name: "plat4",
+                        image: "test.jpg",
+                        prix: 20.99,
+                        description: "jea fe vzvzvzh vds vds vdsvdsv vdsvsdv v dvd vds  d vsddsvdsv vdsv vdvsvds vdsvsv v vdsv dsvdsvs"
+                    },
+                    {
+                        id: "plat5",
+                        name: "plat5",
                         image: "test.jpg",
                         prix: 20.99,
                         description: "jea fe vzvzvzh vds vds vdsvdsv vdsvsdv v dvd vds  d vsddsvdsv vdsv vdvsvds vdsvsv v vdsv dsvdsvs"
@@ -24,8 +46,8 @@ const state = () => ({
                 ],
                 "Bar": [
                     {
-                        id: "plat1",
-                        name: "plat1",
+                        id: "BAR1",
+                        name: "bar1",
                         image: "test.jpg",
                         prix: 12.78,
                         description: "ijvodvh dvhdsvodshvoihds vdsivhs vodshvsdviosvshvodshvsdihv ds vvhodsivodsvhdisv svduvdsh"
@@ -42,6 +64,16 @@ const mutations = {
 const actions = {
     getRestaurant(context, payload) {
         return context.state.restaurantPool.find((val) => val.id === payload.id)
+    },
+    sendCommand(context, payload) {
+        let val = JSON.parse(localStorage.getItem('panier')) ?? []
+        let rdm = Math.round(Math.random() * 10000)
+
+        val.push({...payload, id: rdm})
+
+        localStorage.setItem('panier', JSON.stringify(val))
+
+        return rdm
     }
 };
 
