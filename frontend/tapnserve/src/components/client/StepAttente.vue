@@ -49,11 +49,14 @@ import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, ref} from "vue";
 import ModalDefault from "@/components/components/modalDefault.vue";
 
-const uid = useRoute().params.uid
 const commande = ref({})
 const shoowComm = ref(false)
+const route = useRoute()
+const router = useRouter()
+const uid = ref(0)
 
 onMounted(() => {
+  uid.value = route.params.uid
   updateStatus()
   setInterval(updateStatus, 1000)
 })
@@ -64,11 +67,11 @@ function showCommande() {
 
 function updateStatus() {
   const panier = localStorage.getItem('panier')
-  const id = useRoute().params.uid
+  const id = route.params.uid
 
   commande.value = JSON.parse(panier).find((val) => val.id === parseInt(id))
 
-  if (!commande.value) useRouter().push({name: 'error'})
+  if (!commande.value) router.push({name: 'error'})
 }
 
 const getStatusCommand = computed(() => {

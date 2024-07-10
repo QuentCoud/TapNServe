@@ -73,7 +73,7 @@
               <div class="h-[2rem] mt-3">
                 <label class="inline-flex items-center mb-5 cursor-pointer">
                   <input type="checkbox" value="" class="sr-only peer" v-model="payOnline">
-                  <div class="relative w-11 h-6 bg-[#497E7B] peer-focus:outline-none peer-focus:ring-4 rounded-full peer bg-gray-200 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#497E7B]"></div>
+                  <div class="relative w-11 h-6 bg-[#497E7B] peer-focus:outline-none peer-focus:ring-4 rounded-full bg-gray-200 peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#497E7B]"></div>
                   <span class="ms-3 text-sm font-medium text-gray-900">Payer en ligne</span>
                 </label>
               </div>
@@ -165,7 +165,7 @@
         if (pan) {
           pan.amount += 1
         } else {
-          this.panier.push({...item, amount: 1})
+          this.panier?.push({...item, amount: 1})
         }
 
         this.savePanier();
@@ -189,9 +189,9 @@
             restau: this.$route.params.uid,
             total: (Math.round(this.getTotalPrice * 100) / 100),
             table: this.getTable,
-            status: 1
+            status: 0
           }
-          this.$router.push({name: 'payOnline', query: {data: btoa(JSON.stringify(data))}})
+          this.$router?.push({name: 'payOnline', query: {data: btoa(JSON.stringify(data))}})
         } else {
           this.$store.dispatch('restaurant/sendCommand',
             {panier: this.panier, restau: this.$route.params.uid, total: (Math.round(this.getTotalPrice * 100) / 100), table: this.getTable, status: 0}
@@ -200,7 +200,7 @@
             localStorage.setItem('panier'+this.restau.name, JSON.stringify([]))
 
             setTimeout(() => {
-              this.$router.push({name: 'commandStep', params: {uid: res}})
+              this.$router?.push({name: 'commandStep', params: {uid: res}})
             }, 1000)
           })
         }

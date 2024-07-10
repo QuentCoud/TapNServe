@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d01cc5b-cf89-486b-9af4-0e37a5f26567" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/PayOnline.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/shared/ValidationModal.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/kitchen/KitchenCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/kitchen/KitchenCommande.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/components/HorizontalMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/components/HorizontalMenu.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +121,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/wamp64/www/TapNServe/frontend/tapnserve/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
