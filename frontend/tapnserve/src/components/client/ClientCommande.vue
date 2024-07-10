@@ -188,8 +188,18 @@
 
       }
     },
-    mounted() {
+    created() {
       const id = this.$route.params.uid
+      const tablee = this.$route.params.table
+
+      let tablePool = localStorage.getItem('table' + id)
+
+      if (tablePool) {
+        tablePool = JSON.parse(tablePool)
+        const valta = tablePool.find((val) => parseInt(val.id) === parseInt(tablee))
+        if (!valta) this.$router.push({name: 'error'})
+      } else this.$router.push({name: 'error'})
+
       this.$store.dispatch('restaurant/getRestaurant', {id: id}).then((res) => {
         if (res) {
           this.restau = res

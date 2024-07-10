@@ -14,7 +14,7 @@
             </colgroup>
             <tbody>
               <tr v-for="(item, index) in table1" :key="index" @click="openModal(item, index)" class="item-clickable">
-                <td>#{{ index + 1 }}</td>
+                <td>#{{ item.id }}</td>
                 <td>Table {{ item.table }}</td>
                 <td>{{ item.total }}€</td>
                 <td>
@@ -41,7 +41,7 @@
             </colgroup>
             <tbody>
               <tr v-for="(item, index) in table2" :key="index" @click="openModal(item, index)" class="item-clickable">
-                <td>#{{ index + 1 }}</td>
+                <td>#{{ item.id }}</td>
                 <td>Table {{ item.table }}</td>
                 <td>{{ item.total }}€</td>
                 <td>

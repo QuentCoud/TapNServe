@@ -5,14 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d01cc5b-cf89-486b-9af4-0e37a5f26567" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/Parameters/components/Qrcodes.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/Parameters/indexParameters.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/components/modalDefault.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/rest.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TapNServe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TapNServe.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/indexAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/indexAdmin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/kitchen/KitchenCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/kitchen/KitchenCommande.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/waiter/WaiterCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/waiter/WaiterCommande.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/shared/OrderDetailsModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/shared/OrderDetailsModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/store/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +24,8 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/server/composer.json</pharConfigPath>
     <execution />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -34,10 +37,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\wamp64\bin\php\php8.1.0\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/server/vendor/psr/container" />
       <path value="$PROJECT_DIR$/server/vendor/psr/event-dispatcher" />
@@ -106,6 +112,10 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2ixLPQusW6TaDYjOClxnYfn3Mjl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -117,7 +127,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Cours/M4/TapNServe/frontend/tapnserve/public&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/TapNServe/frontend/tapnserve/public&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -135,12 +145,21 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\TapNServe\frontend\tapnserve\public" />
       <recent name="D:\Cours\M4\TapNServe\frontend\tapnserve\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\TapNServe\frontend\tapnserve\public" />
       <recent name="D:\Cours\M4\TapNServe\frontend\tapnserve\src\assets\plat" />
       <recent name="D:\Cours\M4\TapNServe\frontend\tapnserve\src\assets" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.297" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -152,6 +171,11 @@
       <updated>1720427259688</updated>
       <workItem from="1720427260884" duration="301000" />
       <workItem from="1720427581647" duration="12539000" />
+      <workItem from="1720549084575" duration="5883000" />
+      <workItem from="1720560360611" duration="784000" />
+      <workItem from="1720561417704" duration="4474000" />
+      <workItem from="1720644991182" duration="2533000" />
+      <workItem from="1720647908078" duration="309000" />
     </task>
     <servers />
   </component>

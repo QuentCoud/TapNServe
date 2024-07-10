@@ -2,7 +2,7 @@
   <div class="modal-overlay" @click.self="close">
     <div class="modal-content">
       <div class="details">
-        <p><strong>#{{ index + 1 }}</strong> </p>
+        <p><strong>#{{ item.id }}</strong> </p>
         <p><strong>Table {{ item.table }}</strong> </p>
         <p><strong>{{ item.total }}€</strong> </p>
       </div>

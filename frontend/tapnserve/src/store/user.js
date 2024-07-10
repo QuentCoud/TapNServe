@@ -7,6 +7,11 @@ const users = [
         name: 'test',
         password: 'test',
         restau: 'test1'
+    },
+    {
+        name: 'test2',
+        password: 'test2',
+        restau: 'test2'
     }
 ]
 

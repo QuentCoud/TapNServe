@@ -54,6 +54,59 @@ const state = () => ({
                     }
                 ]
             }
+        },
+        {
+            id: "test2",
+            name: "restaurant test2",
+            image: "",
+            carte: {
+                "Restaurant": [
+                    {
+                        id: "platres1",
+                        name: "platres1",
+                        image: "test.jpg",
+                        prix: 20.99,
+                        description: "jea fe vzvzvzh vds vds vdsvdsv vdsvsdv v dvd vds  d vsddsvdsv vdsv vdvsvds vdsvsv v vdsv dsvdsvs"
+                    },
+                    {
+                        id: "plaezat2",
+                        name: "plaeazt2",
+                        image: "test.jpg",
+                        prix: 20.99,
+                        description: "jea fe vzvzvzh vds vds vdsvdsv vdsvsdv v dvd vds  d vsddsvdsv vdsv vdvsvds vdsvsv v vdsv dsvdsvs"
+                    },
+                    {
+                        id: "plateaz3",
+                        name: "plaeazt3",
+                        image: "test.jpg",
+                        prix: 20.99,
+                        description: "jea fe vzvzvzh vds vds vdsvdsv vdsvsdv v dvd vds  d vsddsvdsv vdsv vdvsvds vdsvsv v vdsv dsvdsvs"
+                    },
+                    {
+                        id: "plateaz4",
+                        name: "plaaezt4",
+                        image: "test.jpg",
+                        prix: 20.99,
+                        description: "jea fe vzvzvzh vds vds vdsvdsv vdsvsdv v dvd vds  d vsddsvdsv vdsv vdvsvds vdsvsv v vdsv dsvdsvs"
+                    },
+                    {
+                        id: "pleazat5",
+                        name: "pleazat5",
+                        image: "test.jpg",
+                        prix: 20.99,
+                        description: "jea fe vzvzvzh vds vds vdsvdsv vdsvsdv v dvd vds  d vsddsvdsv vdsv vdvsvds vdsvsv v vdsv dsvdsvs"
+                    }
+                ],
+                "Sandwich": [
+                    {
+                        id: "BezaAR1",
+                        name: "baeazr1",
+                        image: "test.jpg",
+                        prix: 12.78,
+                        description: "ijvodvh dvhdsvodshvoihds vdsivhs vodshvsdviosvshvodshvsdihv ds vvhodsivodsvhdisv svduvdsh"
+                    }
+                ]
+            }
         }
     ]
 });
