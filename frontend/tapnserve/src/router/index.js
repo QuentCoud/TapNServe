@@ -4,7 +4,7 @@ import AuthentificationComponent from '../components/AuthentificationComponent.v
 import ClientCommande from '../components/client/ClientCommande.vue';
 import IndexAdmin from '@/components/admin/indexAdmin.vue';
 import IndexKitchen from '@/components/admin/kitchen/KitchenCommande.vue';
-import Qrcode from '@/components/admin/Parameters/components/Qrcodes.vue';
+import PayOnline from '@/components/client/PayOnline.vue';
 import IndexWaiter from '@/components/admin/waiter/WaiterCommande.vue';
 import ErrorView from '@/components/client/Error.vue';
 import StepView from '@/components/client/StepAttente.vue';
@@ -15,6 +15,7 @@ const routes = [
     { path: '/order/error', component: ErrorView, name: 'error' },
     { path: '/order/command/:uid', component: StepView, name: 'commandStep' },
     { path: '/order/:uid/:table', component: ClientCommande, name: 'order' },
+    { path: '/payOnline', component: PayOnline, name: 'payOnline' },
     {
         path: '/admin',
         component: IndexAdmin,
