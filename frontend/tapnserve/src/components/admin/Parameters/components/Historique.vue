@@ -8,6 +8,7 @@
               <col style="width: auto;">
               <col style="width: auto;">
               <col style="width: auto;">
+              <col style="width: auto;">
               <col style="width: 20px;">
             </colgroup>
           <tbody>
@@ -15,6 +16,9 @@
               <td>#{{ index + 1 }}</td>
               <td>Table {{ item.table }}</td>
               <td>{{ item.total }}€</td>
+              <td>
+                {{ item.dateFin }}
+              </td>
               <td>
                 <button class="validate-button" @click.stop="openModal(item)">
                   <svg class="search-icon" viewBox="0 0 24 24">
@@ -33,7 +37,6 @@
 
 <script setup>
 import { reactive, ref, onMounted } from 'vue';
-import { mdiCheck } from '@mdi/js';
 import {useStore} from "vuex";
 import ModalComponent from '../../../shared/OrderDetailsModal.vue';
 

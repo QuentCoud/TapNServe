@@ -11,6 +11,7 @@
               <col style="width: auto;">
               <col style="width: auto;">
               <col style="width: 20px;">
+              <col style="width: 20px;">
             </colgroup>
             <tbody>
               <tr v-for="(item, index) in table1" :key="index" @click="openModal(item, index)" class="item-clickable">
@@ -21,6 +22,13 @@
                   <button class="validate-button" @click.stop="prepareCommande(item)">
                     <svg class="check-icon" viewBox="0 0 24 24">
                       <path :d="mdiCheck" />
+                    </svg>
+                  </button>
+                </td>
+                <td>
+                  <button class="cancel-button" @click.stop="cancelCommande2(item)">
+                    <svg class="cancel-icon" viewBox="0 0 24 24">
+                      <path :d="mdiClose" />
                     </svg>
                   </button>
                 </td>
@@ -43,6 +51,13 @@
                     <button class="validate-button" @click.stop="finishCommande(item)">
                       <svg class="check-icon" viewBox="0 0 24 24">
                         <path :d="mdiCheck" />
+                      </svg>
+                    </button>
+                  </td>
+                  <td>
+                    <button class="cancel-button" @click.stop="cancelCommande(item)">
+                      <svg class="cancel-icon" viewBox="0 0 24 24">
+                        <path :d="mdiClose" />
                       </svg>
                     </button>
                   </td>
@@ -73,7 +88,7 @@
 
 <script setup>
 import { reactive, ref, onMounted } from 'vue';
-import { mdiCheck } from '@mdi/js';
+import { mdiCheck, mdiClose } from '@mdi/js';
 import {useStore} from "vuex";
 import ModalComponent from '../../shared/OrderDetailsModal.vue';
 
@@ -146,6 +161,62 @@ const finishCommande = (item) => {
   const index = table2.findIndex(panier => panier.id === item.id);
   if (index !== -1) {
     table2.splice(index, 1);
+  }
+
+  isModalOpen.value = false;
+};
+
+const cancelCommande = (item) => {
+  item.status = 1;
+
+  // Récupère les objets existants dans le localStorage
+  const paniers = JSON.parse(localStorage.getItem('panier')) || [];
+
+  // Met à jour l'objet dans le localStorage
+  const updatedPaniers = paniers.map(panier => {
+    if (panier.id === item.id) {
+      return { ...panier, status: 1 }; // Mise à jour de l'objet avec le statut 1
+    }
+    return panier;
+  });
+
+  // Sauvegarde les objets mis à jour dans le localStorage
+  localStorage.setItem('panier', JSON.stringify(updatedPaniers));
+
+  // Retire l'objet de table2
+  const index = table2.findIndex(panier => panier.id === item.id);
+  if (index !== -1) {
+    table2.splice(index, 1);
+  }
+
+  // Ajoute l'objet à table1
+  table1.push(item);
+
+  isModalOpen.value = false;
+};
+
+const cancelCommande2 = (item) => {
+  item.status = 0;
+
+  // Récupère les objets existants dans le localStorage
+  const paniers = JSON.parse(localStorage.getItem('panier')) || [];
+
+  // Met à jour l'objet dans le localStorage
+  const updatedPaniers = paniers.map(panier => {
+    if (panier.id === item.id) {
+      return { ...panier, status: 0 }; // Mise à jour de l'objet avec le statut 1
+    }
+    return panier;
+  });
+
+  // Sauvegarde les objets mis à jour dans le localStorage
+  localStorage.setItem('panier', JSON.stringify(updatedPaniers));
+
+  // Retire l'objet de table1
+  const index = 
+  table1.findIndex(panier => panier.id === item.id);
+  if (index !== -1) {
+    table1.splice(index, 1);
   }
 
   isModalOpen.value = false;
@@ -243,6 +314,30 @@ th {
 
 .validate-button:hover {
   background-color: darkgreen;
+}
+
+.cancel-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel-icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.cancel-button:hover {
+  background-color: darkred;
 }
 
 .item-clickable {

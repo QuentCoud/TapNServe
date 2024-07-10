@@ -38,6 +38,7 @@
               <col style="width: auto;">
               <col style="width: auto;">
               <col style="width: 20px;">
+              <col style="width: 20px;">
             </colgroup>
             <tbody>
               <tr v-for="(item, index) in table2" :key="index" @click="openModal(item, index)" class="item-clickable">
@@ -48,6 +49,13 @@
                   <button class="validate-button" @click.stop="finishCommande(item)">
                     <svg class="check-icon" viewBox="0 0 24 24">
                       <path :d="mdiCheck" />
+                    </svg>
+                  </button>
+                </td>
+                <td>
+                  <button class="cancel-button" @click.stop="cancelCommande(item)">
+                    <svg class="cancel-icon" viewBox="0 0 24 24">
+                      <path :d="mdiClose" />
                     </svg>
                   </button>
                 </td>
@@ -63,7 +71,7 @@
 
 <script setup>
 import { reactive, ref, onMounted } from 'vue';
-import { mdiCheck } from '@mdi/js';
+import { mdiCheck, mdiClose } from '@mdi/js';
 import {useStore} from "vuex";
 import ModalComponent from '../../shared/OrderDetailsModal.vue';
 
@@ -109,13 +117,16 @@ const validateCommande = (item) => {
 const finishCommande = (item) => {
   item.status = 4;
 
+  const currentDate = new Date();
+  const formattedDate = currentDate.toLocaleDateString('fr-FR');
+
   // Récupère les objets existants dans le localStorage
   const paniers = JSON.parse(localStorage.getItem('panier')) || [];
 
   // Met à jour l'objet dans le localStorage
   const updatedPaniers = paniers.map(panier => {
     if (panier.id === item.id) {
-      return { ...panier, status: 4 }; // Mise à jour de l'objet avec le statut 2
+      return { ...panier, status: 4, dateFin: formattedDate }; // Mise à jour de l'objet avec le statut 2
     }
     return panier;
   });
@@ -124,6 +135,32 @@ const finishCommande = (item) => {
   localStorage.setItem('panier', JSON.stringify(updatedPaniers));
 
   // Retire l'objet de table1
+  const index = table2.findIndex(panier => panier.id === item.id);
+  if (index !== -1) {
+    table2.splice(index, 1);
+  }
+
+  isModalOpen.value = false;
+};
+
+const cancelCommande = (item) => {
+  item.status = 2;
+
+  // Récupère les objets existants dans le localStorage
+  const paniers = JSON.parse(localStorage.getItem('panier')) || [];
+
+  // Met à jour l'objet dans le localStorage
+  const updatedPaniers = paniers.map(panier => {
+    if (panier.id === item.id) {
+      return { ...panier, status: 2 }; // Mise à jour de l'objet avec le statut 2
+    }
+    return panier;
+  });
+
+  // Sauvegarde les objets mis à jour dans le localStorage
+  localStorage.setItem('panier', JSON.stringify(updatedPaniers));
+
+  // Retire l'objet de table2
   const index = table2.findIndex(panier => panier.id === item.id);
   if (index !== -1) {
     table2.splice(index, 1);
@@ -224,6 +261,30 @@ th {
 
 .validate-button:hover {
   background-color: darkgreen;
+}
+
+.cancel-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel-icon {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.cancel-button:hover {
+  background-color: darkred;
 }
 
 .item-clickable {
