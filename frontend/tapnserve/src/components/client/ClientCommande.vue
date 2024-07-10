@@ -208,16 +208,27 @@
       }
     },
     mounted() {
+      setInterval(this.smartphoneTest, 100);
+
       const id = this.$route.params.uid
-      this.$store.dispatch('restaurant/getRestaurant', {id: id}).then((res) => {
-        if (res) {
-          this.restau = res
-          setInterval(this.smartphoneTest, 100);
-          this.initPanier()
-        } else {
-          this.$router.push({name: 'error'})
+      const val = localStorage.getItem('carte'+id)
+
+      if (!val) {
+        this.$router.push({name: 'error'})
+      } else {
+        const table = localStorage.getItem('table'+id)
+
+        if (!table) this.$router.push({name: 'error'})
+        else {
+          const f = JSON.parse(table).find((val) => parseInt(val.id) === parseInt(this.$route.params.table))
+
+          if (!f) this.$router.push({name: 'error'})
         }
-      })
+
+        this.restau = JSON.parse(val)
+        this.initPanier()
+
+      }
     }
   }
   </script>

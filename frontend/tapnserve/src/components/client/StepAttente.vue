@@ -5,7 +5,13 @@
     </div>
 
     <div>
-      Status: {{ getStatusCommand }}
+      <div v-if="getStatus < 4">
+        Status: {{ getStatusCommand }}
+      </div>
+
+      <div class="mt-12">
+        Merci pour votre commande !
+      </div>
     </div>
   </div>
 </template>
@@ -29,9 +35,20 @@ const getStatusCommand = computed(() => {
             return 'en attente de préparation'
           case 2:
             return 'en préparation'
+          case 3:
+            return 'va vous être servis'
           case 4:
-            return 'fini'
+            return ''
         }
+})
+
+const getStatus = computed(() => {
+  const panier = localStorage.getItem('panier')
+  const id = localStorage.getItem('currentCommande')
+
+  const commande = JSON.parse(panier).find((val) => val.id === parseInt(id))
+
+  return commande.status
 })
 </script>
 
