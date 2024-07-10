@@ -33,25 +33,35 @@
         <h2>En cours</h2>
         <div class="table">
           <table>
-            <colgroup>
-              <col style="width: auto;">
-              <col style="width: auto;">
-              <col style="width: auto;">
-              <col style="width: 20px;">
-            </colgroup>
             <tbody>
-              <tr v-for="(item, index) in table2" :key="index" @click="openModal(item, index)" class="item-clickable">
-                <td>#{{ item.id }}</td>
-                <td>Table {{ item.table }}</td>
-                <td>{{ item.total }}€</td>
-                <td>
-                  <button class="validate-button" @click.stop="finishCommande(item)">
-                    <svg class="check-icon" viewBox="0 0 24 24">
-                      <path :d="mdiCheck" />
-                    </svg>
-                  </button>
-                </td>
-              </tr>
+              <div v-for="(item, index) in table2" :key="index">
+                <tr @click="openModal(item, index)" class="item-clickable">
+                  <td>#{{ item.id }}</td>
+                  <td>Table {{ item.table }}</td>
+                  <td>{{ item.total }}€</td>
+                  <td>
+                    <button class="validate-button" @click.stop="finishCommande(item)">
+                      <svg class="check-icon" viewBox="0 0 24 24">
+                        <path :d="mdiCheck" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4">
+                    <div class="modal-content">
+                      <div v-for="(plat, i) in item.panier" :key="i" class="plat">
+                        <img :src="getImagePath(plat.image)" alt="Image du plat" class="plat-image" />
+                        <div class="plat-details">
+                          <p class="plat-name"><strong>{{ plat.name }}</strong></p>
+                          <p class="plat-description">{{ plat.description }}</p>
+                        </div>
+                        <p class="plat-price"><strong>{{ plat.prix }}€</strong></p>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </div>
             </tbody>
           </table>
         </div>
@@ -80,6 +90,10 @@ const openModal = (item, index) => {
   selectedItem.value = item;
   selectedIndex.value = index;
   isModalOpen.value = true;
+};
+
+const getImagePath = (imageName) => {
+  return require(`@/assets/plat/${imageName}`);
 };
 
 const prepareCommande = (item) => {
@@ -242,4 +256,45 @@ th {
   background-color: #a0a0a0;
 }
 
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.plat {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.plat-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.plat-details {
+  flex-grow: 1;
+}
+
+.plat-name {
+  padding-left: 5px;
+  margin: 0;
+  text-align: left;
+}
+
+.plat-description {
+  padding-left: 5px;
+  margin: 0;
+  color: #666;
+  text-align: left;
+}
+
+.plat-price {
+  padding-left: 5px;
+  font-weight: bold;
+}
 </style>

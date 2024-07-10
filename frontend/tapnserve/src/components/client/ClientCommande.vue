@@ -70,6 +70,13 @@
                   </div>
                 </div>
               </div>
+              <div class="h-[2rem] mt-3">
+                <label class="inline-flex items-center mb-5 cursor-pointer">
+                  <input type="checkbox" value="" class="sr-only peer" v-model="payOnline">
+                  <div class="relative w-11 h-6 bg-[#497E7B] peer-focus:outline-none peer-focus:ring-4 rounded-full peer bg-gray-200 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:w-5 after:h-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#497E7B]"></div>
+                  <span class="ms-3 text-sm font-medium text-gray-900">Payer en ligne</span>
+                </label>
+              </div>
 
               <div class="bg-[#497E7B] text-white px-8 py-2 rounded-3xl whitespace-nowrap cursor-pointer mx-24 mt-2" @click="validate">
                 Valider
@@ -112,7 +119,8 @@
         panier: [],
         onSmartphone: false,
         menuItem: "",
-        showValidation: false
+        showValidation: false,
+        payOnline: true
       };
     },
     computed: {
@@ -175,20 +183,33 @@
       },
       validate() {
         this.showValidation = false;
-        this.$store.dispatch('restaurant/sendCommand',
-            {panier: this.panier, restau: this.$route.params.uid, total: (Math.round(this.getTotalPrice * 100) / 100), table: this.getTable}
-        ).then((res) => {
-          localStorage.setItem('currentCommande', res)
-          localStorage.setItem('panier'+this.restau.name, JSON.stringify([]))
+        if (this.payOnline) {
+          const data = {
+            panier: this.panier,
+            restau: this.$route.params.uid,
+            total: (Math.round(this.getTotalPrice * 100) / 100),
+            table: this.getTable,
+            status: 1
+          }
+          this.$router.push({name: 'payOnline', query: {data: btoa(JSON.stringify(data))}})
+        } else {
+          this.$store.dispatch('restaurant/sendCommand',
+            {panier: this.panier, restau: this.$route.params.uid, total: (Math.round(this.getTotalPrice * 100) / 100), table: this.getTable, status: 0}
+          ).then((res) => {
+            localStorage.setItem('currentCommande', res)
+            localStorage.setItem('panier'+this.restau.name, JSON.stringify([]))
 
-          setTimeout(() => {
-            this.$router.push({name: 'commandStep', params: {uid: res}})
-          }, 1000)
-        })
+            setTimeout(() => {
+              this.$router.push({name: 'commandStep', params: {uid: res}})
+            }, 1000)
+          })
+        }
 
       }
     },
     created() {
+      setInterval(this.smartphoneTest, 100);
+
       const id = this.$route.params.uid
       const tablee = this.$route.params.table
 
@@ -203,7 +224,6 @@
       this.$store.dispatch('restaurant/getRestaurant', {id: id}).then((res) => {
         if (res) {
           this.restau = res
-          setInterval(this.smartphoneTest, 100);
           this.initPanier()
         } else {
           this.$router.push({name: 'error'})

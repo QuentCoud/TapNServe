@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d01cc5b-cf89-486b-9af4-0e37a5f26567" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/rest.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TapNServe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TapNServe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/PayOnline.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/shared/ValidationModal.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/kitchen/KitchenCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/kitchen/KitchenCommande.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/waiter/WaiterCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/waiter/WaiterCommande.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/shared/OrderDetailsModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/shared/OrderDetailsModal.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/store/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/store/user.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,28 +119,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/TapNServe/frontend/tapnserve/public&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2022.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Merging main",
+    "last_opened_file_path": "C:/wamp64/www/TapNServe/frontend/tapnserve/public",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PhpStorm 2022.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;vue.recent.templates&quot;: [
-      &quot;Vue Composition API Component&quot;
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\TapNServe\frontend\tapnserve\public" />

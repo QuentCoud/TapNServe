@@ -48,8 +48,6 @@
 import {useRoute, useRouter} from "vue-router";
 import {computed, onMounted, ref} from "vue";
 import ModalDefault from "@/components/components/modalDefault.vue";
-import PlusOutlined from "@/components/components/icons/plusOutlined.vue";
-import MinusOutlined from "@/components/components/icons/minusOutlined.vue";
 
 const uid = useRoute().params.uid
 const commande = ref({})
