@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d01cc5b-cf89-486b-9af4-0e37a5f26567" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/Parameters/components/Qrcodes.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/Parameters/indexParameters.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/components/modalDefault.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/indexAdmin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/admin/indexAdmin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
