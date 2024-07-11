@@ -1,6 +1,6 @@
 <template>
   <div class="flex h-screen pt-12">
-    <div v-if="onSmartphone" class="flex flex-col items-center">
+    <div v-if="onSmartphone" class="flex flex-col items-center overflow-x-hidden">
       <h2 class="flex justify-center">zae</h2>
       <ProfileImage :path="'@/assets/logo.png'" @click="showValidation = false;"/>
       <horizontal-menu :items="Object.keys(restau.carte ?? {})" v-model="menuItem" />
@@ -36,7 +36,7 @@
 
       <Transition name="slide-up">
         <div v-if="showValidation" class="absolute top-0 left-0 right-0 bottom-0 z-20 overflow-hidden" @click.self="showValidation=false;">
-          <div class="bg-white absolute bottom-0 w-full h-[40rem] rounded-t-2xl z-30">
+          <div class="bg-white absolute bottom-0 w-full h-[50rem] rounded-t-2xl z-30">
             <div class="mt-12">
               <div>
                 Commande
@@ -191,7 +191,8 @@
             table: this.getTable,
             status: 0
           }
-          this.$router?.push({name: 'payOnline', query: {data: btoa(JSON.stringify(data))}})
+
+          this.$router?.push({name: 'payOnline', query: {data: btoa(encodeURIComponent(JSON.stringify(data)))}})
         } else {
           this.$store.dispatch('restaurant/sendCommand',
             {panier: this.panier, restau: this.$route.params.uid, total: (Math.round(this.getTotalPrice * 100) / 100), table: this.getTable, status: 0}

@@ -23,8 +23,8 @@
         this.redirect--
         if (this.redirect === 0) {
           clearInterval(interval)
+          const decodedData = JSON.parse(decodeURIComponent(atob((this.data.data))))
 
-          const decodedData = JSON.parse(atob(this.data.data))
 
           this.$store.dispatch('restaurant/sendCommand',
             {...decodedData}

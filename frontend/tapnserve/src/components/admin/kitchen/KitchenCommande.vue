@@ -140,7 +140,6 @@ const prepareCommande = (item) => {
 };
 
 const finishCommande = (item) => {
-  console.log(item)
   item.status = 3;
 
   // Récupère les objets existants dans le localStorage

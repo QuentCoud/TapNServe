@@ -5,10 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8d01cc5b-cf89-486b-9af4-0e37a5f26567" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tapnserve/public/9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/ClientCommande.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/StepAttente.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/components/HorizontalMenu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/components/HorizontalMenu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/PayOnline.vue" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/components/client/PayOnline.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tapnserve/src/store/restaurant.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +134,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/wamp64/www/TapNServe/frontend/tapnserve/public",
+    "last_opened_file_path": "D:/Cours/M4/TapNServe/frontend/tapnserve/public",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -140,8 +152,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\TapNServe\frontend\tapnserve\public" />
       <recent name="D:\Cours\M4\TapNServe\frontend\tapnserve\public" />
+      <recent name="C:\wamp64\www\TapNServe\frontend\tapnserve\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\TapNServe\frontend\tapnserve\public" />
